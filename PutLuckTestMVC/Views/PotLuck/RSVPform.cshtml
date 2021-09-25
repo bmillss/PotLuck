@@ -1,0 +1,15 @@
+﻿@model TeamMember
+@{
+    ViewData["Title"] = "RSVPform";
+}
+
+<h1>RSVP Page</h1>
+
+<form method="post" action="/PotLuck/thankyouRSVP">
+    First Name: <input type="text" name="FirstName" /><br />
+    Last Name: <input type="text" name="LastName" /><br />
+    Email: <input type="email" name="EmailAddress" /><br />
+    Date Attending: <input type="date" name="AttendanceDate" /><br />
+    Guest Name(Optional): <input type="text" name="guestname" /><br />
+    <input type="submit" value="Submit" />
+</form>

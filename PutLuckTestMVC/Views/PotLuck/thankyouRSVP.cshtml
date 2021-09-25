@@ -1,0 +1,13 @@
+﻿@model TeamMember
+@{
+    ViewData["Title"] = "Thankyou!";
+
+}
+<h1>
+    Thank you @Model.FirstName @Model.LastName for RSVPing on @Model.AttendanceDate
+    <br />
+    We will contact you using this email: @Model.EmailAddress 
+    <br />
+    Guests(Optional): @Model.GuestName
+
+</h1>

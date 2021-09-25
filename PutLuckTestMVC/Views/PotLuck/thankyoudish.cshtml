@@ -1,0 +1,16 @@
+﻿@model Dish
+@{
+    ViewData["Title"] = "Dish chosen, thank you!";
+}
+<h1>
+    Thank you <b>@Model.TMName</b> for choosing to bring a dish<br />
+</h1>
+<h5>
+    We will contact you using this phone number: <b>@Model.PhoneNumber</b>
+    <br />
+    The dish we have you bringing is: <b>@Model.DishName</b>
+    <br />
+    Dish Category: <b>@Model.Category</b>
+    <br />
+    Dish Description: <b>@Model.DishDescription</b>
+</h5>

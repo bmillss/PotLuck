@@ -1,0 +1,34 @@
+﻿@model Dish
+@{
+    ViewData["Title"] = "dishlist";
+}
+
+<h1>"Dish successfully added"</h1>
+
+<h1>Dishes</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>DishName</th>
+            <th>DishDescription</th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (Dish newDish in Model)
+        {
+            <tr>
+                <td>@newDish.Id</td>
+                <td>@newDish.DishName</td>
+                <td>@newDish.DishDescription</td>
+                <td>
+                    <a asp-action="DeleteCategory" asp-route-catid="@newDish.Id" class="btn btn-danger">Delete</a>
+                    <a asp-action="EditCategoryForm" asp-route-catid="@newDish.Id" class="btn btn-secondary">Edit</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

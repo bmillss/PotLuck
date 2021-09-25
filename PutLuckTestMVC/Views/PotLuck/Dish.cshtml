@@ -1,0 +1,28 @@
+﻿@model Dish
+@{
+    ViewData["Title"] = "Dish";
+}
+
+
+<h1>Sign up below to bring a Dish</h1>
+<div>
+    <span style="background:red">@ViewData["Message"]</span>
+</div>
+<br />
+<form method="post" action="/PotLuck/thankyoudish">
+    Name: <input type="text" name="TMName" placeholder="joe smith" /><br />
+    <label for="PhoneNumber">Phone Number:</label>
+    <input type="tel" id="PhoneNumber" name="PhoneNumber" placeholder="123-456-7890"
+           pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"><br />
+    DishName: <input type="text" name="DishName" /><br />
+    <label for="Category">Dish Category:</label>
+    <select name="Category" id="Category">
+        <option value="main">Main</option>
+        <option value="dessert">Dessert</option>
+        <option value="appetizer">Appetizer</option>
+        <option value="beverage">Beverage</option>
+    </select> <br />
+    Description: <input type="text" name="DishDescription" placeholder="Sandwhich with Cheese" /><br />
+    <input type="submit" value="Submit" />
+
+</form>
